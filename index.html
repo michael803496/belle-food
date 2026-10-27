@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BelleFood – Naija food, smoky and ready 24/7</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#D63A1A;--deep:#8F2410;--char:#231815;--gold:#F5B82E;--paper:#FFF9F3;--ink:#231815;--card:#FFFFFF;--line:#EBDCCF;--muted:#6E5B50;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#1A1210;--ink:#FBEFE4;--card:#261A16;--line:#3B2A23;--muted:#BBA597;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#1A1210;--ink:#FBEFE4;--card:#261A16;--line:#3B2A23;--muted:#BBA597;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 'DM Sans',system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:'Bricolage Grotesque','DM Sans',sans-serif;line-height:1.02;margin:0}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;position:relative;z-index:2}
+.logo{font:800 26px 'Bricolage Grotesque',sans-serif;text-decoration:none}
+.logo span{color:var(--gold)}
+nav a.l{margin-left:22px;text-decoration:none;font-weight:500;opacity:.9}
+nav a.l:hover{opacity:1;text-decoration:underline;text-underline-offset:6px}
+.hero{background:radial-gradient(circle at 80% 20%,#F2663A 0,transparent 45%),linear-gradient(160deg,var(--red),var(--deep));color:#fff;padding-bottom:90px;position:relative;overflow:hidden}
+.hero .logo,.hero nav a{color:#fff}
+.dot{position:absolute;border-radius:50%;background:rgba(255,255,255,.12);animation:float 9s ease-in-out infinite}
+.d1{width:220px;height:220px;right:-60px;top:120px}.d2{width:90px;height:90px;left:6%;bottom:80px;animation-delay:-3s;background:rgba(245,184,46,.35)}.d3{width:50px;height:50px;left:48%;top:90px;animation-delay:-6s}
+@keyframes float{50%{transform:translateY(-26px) scale(1.06)}}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:center;padding-top:44px;position:relative;z-index:1}
+.hero h1{font-size:clamp(46px,9vw,100px);font-weight:800;letter-spacing:-.03em}
+.hero h1 span{display:inline-block;opacity:0;transform:translateY(40px);animation:rise .8s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.hero p{max-width:46ch;font-size:19px;margin:22px 0 28px;opacity:0;animation:rise .8s .9s forwards}
+.cta{opacity:0;animation:rise .8s 1.1s forwards}
+.btn{display:inline-block;background:var(--gold);color:#231815;font-weight:700;padding:14px 28px;border-radius:999px;border:0;text-decoration:none;cursor:pointer;font-size:17px;font-family:inherit;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.btn.o{background:transparent;color:#fff;border:2px solid #fff;margin-left:8px}
+.badge{background:var(--char);color:#fff;border-radius:30px;padding:28px;transform:rotate(3deg);animation:sway 6s ease-in-out infinite;box-shadow:0 24px 50px rgba(0,0,0,.3)}
+@keyframes sway{50%{transform:rotate(-2deg) translateY(-8px)}}
+.badge b{font:800 58px 'Bricolage Grotesque',sans-serif;color:var(--gold);display:block;line-height:1}
+.badge div+div{margin-top:20px}
+.ribbon{background:var(--gold);color:var(--char);overflow:hidden;white-space:nowrap;padding:14px 0;font:800 22px 'Bricolage Grotesque',sans-serif}
+.ribbon div{display:inline-block;animation:slide 26s linear infinite}
+@keyframes slide{to{transform:translateX(-50%)}}
+section{padding:80px 0}
+h2{font-size:clamp(34px,5vw,56px);font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
+.sub{color:var(--muted);margin:0 0 32px;max-width:56ch}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+.order{display:grid;grid-template-columns:1.5fr 1fr;gap:24px;align-items:start}
+.item{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px 18px;margin-bottom:12px;transition:transform .25s,box-shadow .25s}
+.item:hover{transform:translateX(6px);box-shadow:0 12px 28px rgba(214,58,26,.15)}
+.item .em{font-size:34px;margin-right:14px}
+.item .t{display:flex;align-items:center}
+.item h3{font-size:21px}
+.item small{color:var(--muted)}
+.item .r{display:flex;align-items:center;gap:14px;font-weight:700;white-space:nowrap}
+.add{background:var(--red);color:#fff;border:0;border-radius:999px;width:40px;height:40px;font-size:22px;cursor:pointer;transition:transform .2s}
+.add:hover{transform:rotate(90deg) scale(1.1)}
+.add:focus-visible,.btn:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.cart{background:var(--char);color:#fff;border-radius:26px;padding:26px;position:sticky;top:16px}
+.cart.bump{animation:bump .35s}
+@keyframes bump{40%{transform:scale(1.03)}}
+.cart h3{font-size:26px;margin-bottom:12px}
+.cart li{display:flex;justify-content:space-between;list-style:none;padding:6px 0;border-bottom:1px solid #4a372f}
+.cart ul{padding:0;margin:0 0 14px;min-height:40px}
+.tot{display:flex;justify-content:space-between;font-weight:700;font-size:22px;margin-bottom:16px}
+.cart .btn{width:100%;text-align:center}
+.note{margin-top:12px;min-height:44px;color:var(--gold);font-size:15px}
+.band{background:var(--char);color:#fff;position:relative;overflow:hidden}
+.band .sub{color:#D9C6B9}
+.face{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
+.frame{position:relative;max-width:340px}
+.frame::before{content:"";position:absolute;inset:-14px;border-radius:40px;border:3px solid var(--gold);transform:rotate(-4deg);animation:sway 7s ease-in-out infinite}
+.portrait{position:relative;aspect-ratio:4/5;border-radius:32px;background:linear-gradient(160deg,var(--red),var(--deep));display:grid;place-items:center;color:#fff;font:800 110px 'Bricolage Grotesque',sans-serif;overflow:hidden}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tag{display:inline-block;background:var(--gold);color:var(--char);font-weight:700;border-radius:999px;padding:6px 16px;margin-bottom:16px;font-size:15px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;transition:transform .25s,box-shadow .25s}
+.box:hover{transform:translateY(-6px);box-shadow:0 16px 34px rgba(0,0,0,.12)}
+.box h3{font-size:24px;margin-bottom:8px}
+.box p{margin:6px 0;color:var(--muted)}
+footer{background:linear-gradient(160deg,var(--red),var(--deep));color:#fff;padding:40px 0;text-align:center}
+@media(max-width:760px){.hero-grid,.order,.face{grid-template-columns:1fr}.cart{position:static}nav a.l{display:none}.frame{margin:14px auto}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.hero h1 span,.hero p,.cta,.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="hero">
+ <i class="dot d1"></i><i class="dot d2"></i><i class="dot d3"></i>
+ <div class="wrap">
+  <nav><a class="logo" href="#top">Belle<span>Food</span></a><div><a class="l" href="#menu">Menu</a><a class="l" href="#face">Ambassador</a><a class="l" href="#find">Find us</a></div></nav>
+  <div class="hero-grid" id="top">
+   <div>
+    <h1 id="h"></h1>
+    <p>Native Nigerian dishes from Lagos. Jollof rice, fried rice, stir-fry spaghetti and proper proteins, cooked in the smoke and delivered 24/7.</p>
+    <div class="cta"><a class="btn" href="#menu">Order now</a><a class="btn o" href="https://wa.me/2349137421838">WhatsApp us</a></div>
+   </div>
+   <div class="badge"><div><b>24/7</b>Open and dispatching</div><div><b>₦4,000</b>Jollof, fried rice or spaghetti</div></div>
+  </div>
+ </div>
+</header>
+<div class="ribbon" aria-hidden="true"><div id="rb"></div></div>
+
+<main>
+<section id="menu"><div class="wrap">
+ <h2 class="rv">Pick your plate</h2>
+ <p class="sub rv">Prices are approximate. Add items to see your total. Online checkout is not live yet.</p>
+ <div class="order">
+  <div id="list"></div>
+  <aside class="cart rv" id="cart" aria-live="polite"><h3>Your order</h3><ul id="cl"><li style="border:0;color:#D9C6B9">Nothing added yet</li></ul><div class="tot"><span>Total</span><span id="tt">₦0</span></div><button class="btn" id="po">Place order</button><div class="note" id="nt"></div></aside>
+ </div>
+</div></section>
+
+<section class="band" id="face"><div class="wrap face">
+ <div class="frame rv"><div class="portrait" id="pt" role="img" aria-label="BelleFood brand ambassador">BF</div></div>
+ <div class="rv">
+  <span class="tag">Brand ambassador</span>
+  <h2>The face behind the flavour</h2>
+  <p class="sub">BelleFood was opened by Nigerian influencer King Mitchy (Michelle Mukoro), inspired by her mother’s catering background. Every pot of jollof carries that same care.</p>
+  <a class="btn" href="https://www.instagram.com/bellefood.ng/">Follow @bellefood.ng</a>
+ </div>
+</div></section>
+
+<section id="find"><div class="wrap">
+ <h2 class="rv">Find BelleFood</h2>
+ <p class="sub rv">Walk in, call, or order to your door.</p>
+ <div class="cols">
+  <div class="box rv"><h3>Lekki / Chevron</h3><p>Abiola Court 10, Chevron Alternative, Lekki, Lagos.</p><p>Open 24 hours, with dispatch.</p></div>
+  <div class="box rv"><h3>Agbara / Badagry</h3><p>Bellefood.ng serves Agbara-Atan, Lusada and the Badagry axis.</p></div>
+  <div class="box rv"><h3>Order by WhatsApp</h3><p><a href="https://wa.me/2349137421838">09137421838</a></p><p><a href="https://wa.me/2349063584306">09063584306</a></p></div>
+  <div class="box rv"><h3>Delivery apps</h3><p>BelleFood is live on Glovo. Open the app, search BelleFood, order.</p></div>
+  <div class="box rv"><h3>Social</h3><p>Instagram <a href="https://www.instagram.com/bellefood.ng/">@bellefood.ng</a></p><p>TikTok <a href="https://www.tiktok.com/@bellefoodlagos">@bellefoodlagos</a></p></div>
+ </div>
+</div></section>
+</main>
+<footer><div class="wrap"><div class="logo" style="margin-bottom:6px">Belle<span>Food</span></div>Lagos, Nigeria. Open 24/7.</div></footer>
+
+<script>
+var h=document.getElementById("h");
+"Smoky jollof. Hot, fast, any hour.".split(" ").forEach(function(w,i){var s=document.createElement("span");s.textContent=w;s.style.animationDelay=(i*.14)+"s";h.appendChild(s);h.appendChild(document.createTextNode(" "))});
+var rb="";for(var k=0;k<8;k++)rb+="Jollof rice  ✦  Fried rice  ✦  Stir-fry spaghetti  ✦  Peppered turkey  ✦  ";
+document.getElementById("rb").textContent=rb;
+var M=[["🍛","Jollof rice","Smoky party-style jollof",4000],["🍚","Fried rice","With mixed veg",4000],["🍝","Stir-fry spaghetti","Tossed hot",4000],["🍗","Chicken","Fried or grilled",5500],["🦃","Peppered turkey","Spicy and juicy",6000],["💧","Bottled water","",700]];
+var cart={};
+function n(v){return "₦"+v.toLocaleString("en-NG")}
+var L=document.getElementById("list");
+M.forEach(function(m,i){var d=document.createElement("div");d.className="item rv";
+d.innerHTML='<div class="t"><span class="em">'+m[0]+'</span><div><h3>'+m[1]+'</h3><small>'+m[2]+'</small></div></div><div class="r">'+n(m[3])+'<button class="add" aria-label="Add '+m[1]+'">+</button></div>';
+d.querySelector("button").onclick=function(){cart[i]=(cart[i]||0)+1;draw();var c=document.getElementById("cart");c.classList.remove("bump");void c.offsetWidth;c.classList.add("bump")};L.appendChild(d)});
+function draw(){var t=0,x="";
+Object.keys(cart).forEach(function(k){t+=M[k][3]*cart[k];x+="<li><span>"+cart[k]+" × "+M[k][1]+"</span><span>"+n(M[k][3]*cart[k])+"</span></li>"});
+document.getElementById("cl").innerHTML=x||'<li style="border:0;color:#D9C6B9">Nothing added yet</li>';document.getElementById("tt").textContent=n(t)}
+document.getElementById("po").onclick=function(){document.getElementById("nt").textContent="Online ordering opens soon. For now, message us on WhatsApp: 09137421838."};
+var els=document.querySelectorAll(".rv");
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.15});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add("in")})}
+</script>
+</body>
+</html>
